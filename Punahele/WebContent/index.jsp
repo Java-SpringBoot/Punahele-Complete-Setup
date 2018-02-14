@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Punahele - Video Streaming</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="utils/b64Utils.js"></script>
+<script src="utils/frameUtils.js"></script>
+<script src="streamManager.js"></script>
+<script language="javascript" type="text/javascript">
+	var wsUri = "ws://localhost:8080/Punahele/requestVideoAsImages";
+	var websocket = new WebSocket(wsUri);
+	function init() {
+		websocket.onmessage = function(evt) {
+			readFrameData(evt);
+		};
+	}
+	window.addEventListener("load", init, false);
+</script>
+</head>
+
+
+<body>
+	<h2 style="text-align: center;">Punahele - Video Streaming Service</h2>
+	<div style="text-align: center;">
+		<input onclick="requestFrames(1,100)" value="Start video" type="button">
+	</div>
+	<div>
+		<img id='frame'></img>
+	</div>
+
+</body>
+</html>

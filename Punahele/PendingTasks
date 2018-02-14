@@ -1,0 +1,15 @@
+The front end should request for more frames as and when needed.
+When the page loads, make sure that some frames related to that video are already in memory.
+Or at least a screenshot should be fine.
+Make sure that A Redis like server (or any cache provider) is setup, and frames are stored on it.
+And ensure that all the videos have their corresponding File handler (RandomAccessFile) cached
+Design a beautiful homepage - Use Angular, Botstrapp
+Add Search server as well
+
+Kafka.
+Multiple user requests arrive at the server. The requests will be queued together.
+The websocket onmessage method will be asynchronous (Figure out how to call one)
+Then multiple threads will be picking up requests from the queue, call the appropriate video file,
+and put the data to Kafka(Check how to do this).
+Then data will be read from Kafka and each request will be served accordingly.
+Remember, websocket is multi threaded. Each onmessage method will be called in a separate thread
