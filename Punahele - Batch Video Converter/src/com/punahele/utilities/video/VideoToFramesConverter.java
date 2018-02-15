@@ -16,7 +16,6 @@ import java.util.function.Consumer;
 
 import javax.imageio.ImageIO;
 
-import org.jcodec.api.FrameGrab;
 import org.jcodec.api.JCodecException;
 import org.jcodec.api.awt.AWTFrameGrab;
 import org.jcodec.common.io.FileChannelWrapper;

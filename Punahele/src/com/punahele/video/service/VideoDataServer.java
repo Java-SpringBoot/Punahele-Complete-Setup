@@ -66,6 +66,13 @@ public class VideoDataServer {
 		//Queue video requests. Once request is read by threads, they read the video data and
 		//put them to Kafka. From there, the returned Future will regularly check Kafka for any 
 		//video data read. The websocket endpoint will then send data async to the client through a Future handle
+		
+		
+		//Client sends a request through websocket. Server persists the request to Redis server.
+		//If the server fails after the client has placed a request, the server can quickly recover from the failure
+		//and serve the clients with the request which has been stored in Redis server.
+		//In the client, we should just have a logic that will re establish the connection to 
+		//the server. Also viewed history tracker should be done with Redis.
 		return null;
 	}
 }

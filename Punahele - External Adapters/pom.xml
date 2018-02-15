@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+	http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.punahele.adapters</groupId>
+	<artifactId>Punahele-External_Adapters</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Punahele - External Adapters</name>
+	<description>External Adapters (Kafka, Redis, ElasticSearch) for Punahele</description>
+
+	<!-- Output to jar format -->
+	<packaging>jar</packaging>
+	<url>http://maven.apache.org</url>
+
+	<build>
+		<finalName>PunaheleAdapters</finalName>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<!-- Set a JDK compiler level -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
