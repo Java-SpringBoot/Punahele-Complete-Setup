@@ -12,8 +12,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import redis.clients.jedis.Client;
-
 public class ElasticSearchClient {
 	//Ref url https://www.ibm.com/developerworks/library/j-use-elasticsearch-java-apps/index.html
 	private static String ELASTIC_SEARCH_URL = "http://localhost:9300/";
@@ -50,7 +48,7 @@ public class ElasticSearchClient {
 	}
 
 	public void insertDocument(String doc) {
-//curl -XPUT "http://localhost:9200/music/songs/1" -d '
+        //curl -XPUT "http://localhost:9200/music/songs/1" -d '
 		//	{ "name": "Deck the Halls", "year": 1885, "lyrics": "Fa la la la la" }'
 	}
 	
