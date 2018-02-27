@@ -2,5 +2,15 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/jedis-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/commons-pool2-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/zkclient-0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/rest-5.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/kafka-clients-0.10.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/httpmime-4.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/httpcore-4.4.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ragulkumar.rajendran/Downloads/httpclient-4.5.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
