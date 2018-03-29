@@ -1,0 +1,46 @@
+#First start ZooKeeper server
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+#Start Kafka server
+bin\windows\kafka-server-start.bat config\server.properties
+bin\windows\kafka-server-start.bat config\server1.properties
+bin\windows\kafka-server-start.bat config\server2.properties
+
+#Create Kafka Topics
+bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 3 --partitions 25 --topic 300_Film
+
+#List Kafka Topics
+bin\windows\kafka-topics.bat --list --zookeeper localhost:2181
+
+#Send some messages
+bin\windows\kafka-console-producer.bat --broker-list localhost:9093 --topic 300_Film
+
+#Consume messages
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9094 --topic 300_Film --from-beginning
+
+#Describe a topic
+bin\windows\kafka-topics.bat --describe --zookeeper localhost:2181 --topic 300_Film
+
+#List consumers connected
+bin\windows\kafka-consumer-groups.bat --list --zookeeper localhost:2181
+bin\windows\kafka-consumer-groups.bat --bootstrap-server localhost:9093 --list --new-consumer
+
+
+bin\windows\kafka-console-producer.bat --broker-list localhost:9093 --topic Aneegan
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9093 --topic Aneegan --from-beginning
+bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testnow123
+bin\windows\kafka-console-producer.bat --broker-list localhost:9093 --topic testnow123
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9093 --topic testnow123 --from-beginning
+
+
+
+#Get the list of brokers running
+bin\windows\zookeeper-shell.bat localhost:2181
+  It will open a editot--> Enter the commands here -- 
+     ls /brokers/ids  # Gives the list of active brokers
+     ls /brokers/topics #Gives the list of topics
+     get /brokers/ids/0 #Gives more detailed information of the broker id '0'
+	 
+	 
+List consumer list	 
+bin\windows\kafka-consumer-groups.bat --list --bootstrap-server localhost:9090	 

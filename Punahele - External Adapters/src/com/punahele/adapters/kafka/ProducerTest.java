@@ -1,6 +1,8 @@
 package com.punahele.adapters.kafka;
 
 import java.util.Properties;
+import java.util.Random;
+import java.util.UUID;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
@@ -12,9 +14,9 @@ import org.apache.kafka.common.serialization.StringSerializer;
 
 public class ProducerTest {
 
-    private final static String TOPIC = "test_topic_v2";
+    private final static String TOPIC = "300_Film";
     private final static String BOOTSTRAP_SERVERS =
-            "localhost:9092";
+            "localhost:9090";
     
     private static Producer<Long, String> createProducer() {
         Properties props = new Properties();
@@ -45,7 +47,7 @@ public class ProducerTest {
             for (long index = time; index < time + sendMessageCount; index++) {
                 final ProducerRecord<Long, String> record =
                         new ProducerRecord<>(TOPIC, index,
-                                    "Fuck Dich " + index);
+                        		"111111111111111111Metallica Rocks" + " " + UUID.randomUUID().toString());
 
                 RecordMetadata metadata = producer.send(record).get();
 

@@ -117,7 +117,6 @@ public class VideoToFramesConverter {
 			}
 		});
 		frames.forEach(new Consumer<File>() {
-
 			@Override
 			public void accept(File t) {
 				System.out.println(t.getName());
